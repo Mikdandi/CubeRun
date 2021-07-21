@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collisionInfo.collider.CompareTag("Obstacle"))
         {
-            Debug.Log("We hit an Obstacle");
+            movement.enabled = false;
         }
        
 
