@@ -9,12 +9,14 @@ public class Movement : MonoBehaviour
 
     public float forwardForse = 2000f;
     public float sideForse = 500f;
+    public float goFaster = 1f;
   
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(0,0, forwardForse * Time.deltaTime);
+        goFaster += 0.01f;
+        rb.AddForce(0,0, forwardForse * Time.deltaTime*goFaster);
 
         if( Input.GetKey("d") )
         {
