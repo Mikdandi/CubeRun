@@ -23,18 +23,19 @@ public class ContinuingLevel : MonoBehaviour
     {
         if(Vector3.Distance(player.GetPosition(), lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
         {
-            PLAYER_DISTANCE_SPAWN_LEVEL_PART();
+            SpawnLevelPart();
         }
     }
 
     private void SpawnLevelPart()
     {
         Transform lastLevelPartTransform = SpawnLevelPart(lastEndPosition);
-
+        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
     }
 
     private Transform SpawnLevelPart(Vector3 spawnPosition)
     {
-        Transform levelPartTransform =Instantiate(ContinuingLevel, spawnPosition,)
+        Transform levelPartTransform = Instantiate(ContinuingLevel, spawnPosition, Quaternion.identity);
+        return levelPartTransform;
     }
 }
