@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public Rigidbody rb;
 
 
-    public float forwardForse = 2000f;
+    public float forwardForse = 1000f;
     public float sideForse = 500f;
     public float goFaster = 1f;
   

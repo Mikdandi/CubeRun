@@ -15,11 +15,20 @@ public class Score : MonoBehaviour
         scoreText.text = score.ToString();
         
     }
-  public  void getBonus()
+  public  void getBigBonus()
     {
         score += 100;
         scoreText.text += score.ToString("0");
     }
-
+    public void getMediumBonus()
+    {
+        score += 25;
+        scoreText.text += score.ToString("0");
+    }
+    public void getSmallBonus()
+    {
+        score += 5;
+        scoreText.text += score.ToString("0");
+    }
 
 }

@@ -16,9 +16,19 @@ public class PlayerCollision : MonoBehaviour
 
         }
 
-        if (collisionInfo.collider.CompareTag("Bonus"))
+        if (collisionInfo.collider.CompareTag("BigBonus"))
         {
-            FindObjectOfType<Score>().getBonus();
+            FindObjectOfType<Score>().getBigBonus();
+
+        }
+        if (collisionInfo.collider.CompareTag("MediumBonus"))
+        {
+            FindObjectOfType<Score>().getMediumBonus();
+
+        }
+        if (collisionInfo.collider.CompareTag("SmallBonus"))
+        {
+            FindObjectOfType<Score>().getSmallBonus();
 
         }
 
